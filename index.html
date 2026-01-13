@@ -1,409 +1,462 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
-	  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FF2TGL7P4G"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FF2TGL7P4G');
-</script>
-	  
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta name="description" content="Portfolio of Alpana Pothukuchi. Information Systems student at Northeastern University">
-    <meta name="author" content="Alpana Pothukuchi">
-
-    <title>Alpana Pothukuchi - Portfolio</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-
-    <!-- Stylesheets -->
-    <link href="assets/css/vendor.css" rel="stylesheet">
-    <link href="assets/css/portfolio.css" rel="stylesheet">
-
-    <!-- Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FF2TGL7P4G"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-47093906-1', 'alpana12.github.io');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-FF2TGL7P4G");
     </script>
 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Alpana Pothukuchi. Information Systems graduate with experience in software engineering and data-driven development."
+    />
+    <meta name="author" content="Alpana Pothukuchi" />
+
+    <title>Alpana Pothukuchi - Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+    <!-- Stylesheets -->
+    <link href="assets/css/vendor.css" rel="stylesheet" />
+    <link href="assets/css/portfolio.css" rel="stylesheet" />
+
+    <!-- Legacy GA (optional; keep only if you still use UA) -->
+    <script>
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+      ga("create", "UA-47093906-1", "alpana12.github.io");
+      ga("send", "pageview");
+    </script>
   </head>
 
   <body>
-
     <!-- Side Menu -->
-    <a id="menu-toggle" href="#" class="btn bg-clear btn-lg toggle text-white">
-      <i class="fa fa-bars"></i>
+    <a id="menu-toggle" href="#" class="btn bg-clear btn-lg toggle text-white" aria-label="Open menu">
+      <i class="fa fa-bars" aria-hidden="true"></i>
     </a>
-    <div id="sidebar-wrapper">
+
+    <nav id="sidebar-wrapper" aria-label="Site">
       <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle">
-          <i class="fa fa-chevron-right"></i>
+        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle" aria-label="Close menu">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </a>
-        <li><a href="#top">
-          <i class="fa fa-home"></i>
-          <span class="icon-space">Welcome</span>
-        </a></li>
-        <li><a href="#about">
-          <i class="fa fa-user"></i>
-          <span class="icon-space">About Me</span>
-        </a></li>
-        <li><a href="#education">
-          <i class="fa fa-university"></i>
-          <span class="icon-space">Education</span>
-        </a></li>
-        <li><a href="#portfolio">
-          <i class="fa fa-briefcase"></i>
-          <span class="icon-space">Experience</span>
-        </a></li>
-        <li><a href="#projects">
-          <i class="fa fa-coffee"></i>
-          <span class="icon-space">Projects</span>
-        </a></li>       
-        <li><a href="#contact">
-          <i class="fa fa-envelope"></i>
-          <span class="icon-space">Contact</span>
-        </a></li>
+
+        <li>
+          <a href="#top"><i class="fa fa-home" aria-hidden="true"></i><span class="icon-space">Welcome</span></a>
+        </li>
+        <li>
+          <a href="#about"><i class="fa fa-user" aria-hidden="true"></i><span class="icon-space">About</span></a>
+        </li>
+        <li>
+          <a href="#education"><i class="fa fa-university" aria-hidden="true"></i><span class="icon-space">Education</span></a>
+        </li>
+        <li>
+          <a href="#experience"><i class="fa fa-briefcase" aria-hidden="true"></i><span class="icon-space">Experience</span></a>
+        </li>
+        <li>
+          <a href="#volunteering"><i class="fa fa-heart" aria-hidden="true"></i><span class="icon-space">Volunteering</span></a>
+        </li>
+        <li>
+          <a href="#projects"><i class="fa fa-coffee" aria-hidden="true"></i><span class="icon-space">Projects</span></a>
+        </li>
+        <li>
+          <a href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i><span class="icon-space">Contact</span></a>
+        </li>
       </ul>
-    </div>
+    </nav>
     <!-- /Side Menu -->
 
-
     <!-- Welcome -->
-    <div id="top" class="intro bg-bind-nyc">
+    <header id="top" class="intro bg-bind-nyc">
       <div class="container vert-text">
         <div class="container-mid">
-        <h1><font color="black">Alpana Pothukuchi</font></h1>
-        <br><br>
-        <div class="bottom-100">
-          <h2 class="tagline"><font color="black">Avid Reader. Keen Developer. Happy Artist.</font></h2>
-        </div>
-        <a href="#about" id="start-btn" class="btn btn-primary btn-lg btn-user">
-          <i class="fa fa-chevron-down"></i> Let's Get Started</a>
-        </div>
+          <h1 class="hero-title">Alpana Pothukuchi</h1>
+
+          <div class="bottom-100">
+            <h2 class="tagline hero-tagline">Avid Reader. Keen Developer. Happy Artist.</h2>
+          </div>
+
+          <a href="#about" id="start-btn" class="btn btn-primary btn-lg btn-user">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i> Let's Get Started
+          </a>
         </div>
       </div>
-    </div>
+    </header>
     <!-- /Welcome -->
 
-
     <!-- About -->
-    <div id="about" class="intro bg-bind-mumbai">
+    <section id="about" class="intro bg-bind-mumbai">
       <div class="container vert-text">
         <div class="container-center">
-          <h2 class="text-center space-bottom text-white">
-            <i class="fa fa-user"></i><font size="8" color="white"> A little about me</font>
+          <h2 class="text-center space-bottom text-white section-title">
+            <i class="fa fa-user" aria-hidden="true"></i> A little about me
           </h2>
+
           <div class="text-left text-white bottom-60">
-          <blockquote class="lead"><font size="3" color="white">
-            <p>
-              Hi, I'm Alpana!
+            <blockquote class="lead">
+              <p>Hi, I'm Alpana!</p>
+
+              <p>
+                I’m a developer with proficiency in <strong>Java</strong>, C++, HTML5, CSS3, JavaScript and frameworks,
+                SQL, AWS, C# and ASP.NET.
               </p>
-              <p>I am a developer with proficiency in <strong>Java</strong>,
-              C++, HTML5, CSS3, JavaScript and its frameworks, SQL, AWS, C# and ASP.NET
-            </p>
-            <p>I love reading whenever I get free time. I usually end up with a fiction novel, sometimes it can be a biography or a philosophy book. I am enthusiastic artist who enjoys exploring places, doing origami and painting. I believe the creativity helps me to code better and have a positive attitude towards life.</p>
-            <p>
-              I am a computer science graduate from Northeastern University, Boston and have been programming
-              for over 6 years. I am currently working as a Senior Associate Software Engineer. 
-            </p>
-			<p>
-				I enjoy exploring the new technologies from time to time and keep track of the interesting things I find with this blog : <a href="http://theintellectualtalks.blogspot.com"> The Intellectual Talks </a>
-			</p>
-            </font>
-          </blockquote>
+
+              <p>
+                I love reading whenever I get free time—usually fiction, but sometimes biographies and philosophy.
+                I’m also an enthusiastic artist who enjoys exploring places, origami, and painting. I believe creativity
+                helps me code better and stay positive.
+              </p>
+
+              <p>
+                I’m a computer science graduate from Northeastern University, Boston and have been programming for
+                over 6 years. I’m currently working as a Senior Associate Software Engineer.
+              </p>
+
+              <p>
+                I keep track of interesting things I learn on my blog:
+                <a href="http://theintellectualtalks.blogspot.com" target="_blank" rel="noopener">The Intellectual Talks</a>
+              </p>
+            </blockquote>
           </div>
+
+          <a href="#education" id="portfolio-btn" class="btn btn-default btn-lg btn-user">View My Education</a>
         </div>
-        <a href="#education" id="portfolio-btn" class="btn btn-default btn-lg btn-user">View My Education</a>
       </div>
-    </div>
-    <!-- /Intro -->
+    </section>
+    <!-- /About -->
 
     <!-- Education -->
-    <div id="education" class="intro header-fill bg-bind-education">
+    <section id="education" class="intro header-fill bg-bind-education">
       <div class="container vert-text">
         <div class="container-center">
-          <br>
-          <h2 class="text-center space-bottom text-white">
-          <i class="fa fa-university"></i><font size="8"> Education</font>
+          <h2 class="text-center space-bottom text-white section-title">
+            <i class="fa fa-university" aria-hidden="true"></i> Education
           </h2>
+
           <div class="row">
+            <div class="col-md-16 text-left projects-list">
+              <article>
+                <blockquote class="lead">
+                  <details>
+                    <summary><strong class="item-title">Northeastern University</strong></summary>
+                    <p><strong>GPA</strong>: 3.4/4.0</p>
+                    <p><strong>Graduation</strong>: May 2017</p>
+                    <p><strong>Degree</strong>: Master of Science in Information Systems</p>
 
-          <div class="col-md-16 text-left projects-list">
-            
-            <a>
-              <blockquote class="lead">
-              <details>
-                <summary><strong><font size="6">Northeastern University</font></strong></summary>
-                <strong>GPA</strong> : 3.4/4.0
-                </br>
-                <strong>Graduation</strong> : May 2017
-                </br>
-                <strong>Degree</strong> : Master of Science in Information Systems
-                </br>
-                <details>
-                <summary><strong>Courses Taken</strong></summary>
-                 Application Engineering Development
-                </br>Algorithms and Data Structures
-                </br>Web Tools and Methods
-                </br>Engineering of Big Data Systems
-                </br>Cloud Computing 
-                </br>Multi-threading and concurrent programming
-                </br>Blockchain Engineering and Crytocurrency
-                </br>Web Design and User Interface
-                </details>
-              </details>
-              </blockquote>
-            </a>
+                    <details>
+                      <summary><strong>Courses Taken</strong></summary>
+                      <p>Application Engineering Development</p>
+                      <p>Algorithms and Data Structures</p>
+                      <p>Web Tools and Methods</p>
+                      <p>Engineering of Big Data Systems</p>
+                      <p>Cloud Computing</p>
+                      <p>Multi-threading and concurrent programming</p>
+                      <p>Blockchain Engineering and Cryptocurrency</p>
+                      <p>Web Design and User Interface</p>
+                    </details>
+                  </details>
+                </blockquote>
+              </article>
 
-            <a>
-              <blockquote class="lead">
-              <details>
-                <summary><strong><font size="6">Osmania University</font></strong></summary>
-                <strong>GPA</strong> : 78%
-                </br>
-                <strong>Graduation</strong> : May 2013
-                </br>
-                <strong>Degree</strong> : Bachelor of Engineering in Computer Science
-                </br>
-				<details>
-                <summary><strong>Courses Taken</strong></summary>
-                Software Engineering
-                </br>Design and Analysis of Algorithms
-                </br>Database Management Systems
-                </br>Data Structures using C++
-                </br>Operating Systems
-                </br>Data Mining and Data Warehousing
-                </br>Artificial Intelligence
-                </br>OOPS using Java
-                </details>
-              </details>
-              </blockquote>
-            </a>
+              <article>
+                <blockquote class="lead">
+                  <details>
+                    <summary><strong class="item-title">Osmania University</strong></summary>
+                    <p><strong>GPA</strong>: 78%</p>
+                    <p><strong>Graduation</strong>: May 2013</p>
+                    <p><strong>Degree</strong>: Bachelor of Engineering in Computer Science</p>
+
+                    <details>
+                      <summary><strong>Courses Taken</strong></summary>
+                      <p>Software Engineering</p>
+                      <p>Design and Analysis of Algorithms</p>
+                      <p>Database Management Systems</p>
+                      <p>Data Structures using C++</p>
+                      <p>Operating Systems</p>
+                      <p>Data Mining and Data Warehousing</p>
+                      <p>Artificial Intelligence</p>
+                      <p>OOPS using Java</p>
+                    </details>
+                  </details>
+                </blockquote>
+              </article>
+            </div>
           </div>
-          </div>
-          <a href="#portfolio" id="portfolio-btn" class="btn btn-default btn-lg btn-user top-50 bottom-40">View My Experience</a>
+
+          <a href="#experience" class="btn btn-default btn-lg btn-user top-50 bottom-40">View My Experience</a>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- /Education -->
 
-    <!--/Education-->
-
-    <!-- Portfolio -->
-    <div id="portfolio" class="intro header-fill bg-bind-work">
+    <!-- Experience -->
+    <section id="experience" class="intro header-fill bg-bind-work">
       <div class="container vert-text">
         <div class="container-center">
-          <h2 class="text-center space-bottom text-white">
-            <i class="fa fa-briefcase"></i><font size="8"> Experience</font>
+          <h2 class="text-center space-bottom text-white section-title">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> Experience
           </h2>
-          <div class="row">
-          <div class="col-md-12 text-left projects-list">
-            
-			<a>
-              <blockquote class="lead">
-              <details>
-                <summary><strong><font size="6">Extreme Networks</font></strong></summary>
-                Role : Senior Associate Software Engineer
-                </br>Duration : Aug. 2018 – Present 
-                <details>
-                <summary><strong>Technologies used</strong></summary>
-                Java, Ext JS, JavaScript, HTML5, CSS
-                </details>
-                <details>
-                <summary><strong>Responsibilities</strong></summary>
-                <p>Redesigned the user interface for Extreme Management Center using Ext JS 6.2, JavaScript, CSS, HTML 5 and Git</p>
-				<p>Debugged the code and fixed bugs related to web development using Ext JS 6.2 and Java EE</p> 
-				<p>Documented, tested and modified the code to enhance the functionality of Extreme Management Center</p>
-                </details>
-              </details>
-              </blockquote>
-            </a>
-			
-            <a>
-              <blockquote class="lead">
-              <details>
-                <summary><strong><font size="6">Vestmark, Inc.</font></strong></summary>
-                Role : Software Engineer Intern
-                </br>Duration : May 2017 - Aug 2017
-                <details>
-                <summary><strong>Technologies used</strong></summary>
-                Java, REST, SpringMVC, JavaScript, SQL, JUnit4
-                </details>
-                <details>
-                <summary><strong>Responsibilities</strong></summary>
-                <p>Designed stored procedures to identify the database deadlocks for financial transaction and helped to speed up the bug fix process by 80%</p>
-				<p>Developed unit test coverage for the domain to test the various classes using JUnit4 framework</p> 
-				<p>Increased proficiency by using Atlassian software management suite (Bamboo, JIRA, Confluence) and by being part of an agile, collaborative team environment </p>
-                </details>
-              </details>
-              </blockquote>
-            </a>
 
-            <a>
-              <blockquote class="lead">
-              <details>
-                <summary><strong><font size="6">Yardi Software India Pvt. Ltd.</font></strong></summary>
-                Role : Software Programmer
-                </br>Duration : November 2013 - July 2016
-                <details>
-                <summary><strong>Technologies used</strong></summary>
-                SQL, SSRS, Crystal, JavaScript, ASP.NET, XML/XSLT, Oracle DB and Yardi reporting tools
-                </details>
-                <details>
-                <summary><strong>Responsibilities</strong></summary>
-              <p>Designed tables (Relations), functions, stored procedures, views, and triggers and optimized the database performance as SQL developer </p>
-              <p>Created and edited SQL scripts, Crystal and SSRS reports for client specific requirements and thus increased the customer software experience </p>
-              <p>Developed JavaScript for front-end and client-side validations for user account information based on their business rules</p>
-              <p>Debugged the code and developed functionalities to generate the utility statements using baseline calculations, for military clients, thereby leading to a 2% increase in financial performance of the organization</p>
-              <p>Received client appreciation for outstanding work in improving the performance of financial report by decimating the turnaround time from 5 minutes to less than a minute 
-            </p>
-                </details>
-              </details>
-              </blockquote>
-            </a>
-          </div>
+          <div class="row">
+            <div class="col-md-12 text-left projects-list">
+              <article>
+                <blockquote class="lead">
+                  <details>
+                    <summary><strong class="item-title">Extreme Networks</strong></summary>
+                    <p><strong>Role</strong>: Senior Associate Software Engineer</p>
+                    <p><strong>Duration</strong>: Aug. 2018 – Present</p>
+
+                    <details>
+                      <summary><strong>Technologies used</strong></summary>
+                      <p>Java, Ext JS, JavaScript, HTML5, CSS</p>
+                    </details>
+
+                    <details>
+                      <summary><strong>Responsibilities</strong></summary>
+                      <ul class="clean-list">
+                        <li>Redesigned UI for Extreme Management Center using Ext JS 6.2, JavaScript, HTML5, CSS, and Git.</li>
+                        <li>Debugged and fixed web-related issues using Ext JS 6.2 and Java EE.</li>
+                        <li>Documented, tested, and modified code to enhance functionality and stability.</li>
+                      </ul>
+                    </details>
+                  </details>
+                </blockquote>
+              </article>
+
+              <article>
+                <blockquote class="lead">
+                  <details>
+                    <summary><strong class="item-title">Vestmark, Inc.</strong></summary>
+                    <p><strong>Role</strong>: Software Engineer Intern</p>
+                    <p><strong>Duration</strong>: May 2017 – Aug 2017</p>
+
+                    <details>
+                      <summary><strong>Technologies used</strong></summary>
+                      <p>Java, REST, Spring MVC, JavaScript, SQL, JUnit4</p>
+                    </details>
+
+                    <details>
+                      <summary><strong>Responsibilities</strong></summary>
+                      <ul class="clean-list">
+                        <li>Designed stored procedures to identify database deadlocks for financial transactions; sped up bug resolution.</li>
+                        <li>Built unit tests for domain classes using JUnit4.</li>
+                        <li>Worked in an agile environment using Bamboo, Jira, and Confluence.</li>
+                      </ul>
+                    </details>
+                  </details>
+                </blockquote>
+              </article>
+
+              <article>
+                <blockquote class="lead">
+                  <details>
+                    <summary><strong class="item-title">Yardi Software India Pvt. Ltd.</strong></summary>
+                    <p><strong>Role</strong>: Software Programmer</p>
+                    <p><strong>Duration</strong>: Nov 2013 – Jul 2016</p>
+
+                    <details>
+                      <summary><strong>Technologies used</strong></summary>
+                      <p>SQL, SSRS, Crystal, JavaScript, ASP.NET, XML/XSLT, Oracle DB, Yardi reporting tools</p>
+                    </details>
+
+                    <details>
+                      <summary><strong>Responsibilities</strong></summary>
+                      <ul class="clean-list">
+                        <li>Designed tables, functions, stored procedures, views, and triggers; optimized SQL performance.</li>
+                        <li>Built and updated SQL scripts, Crystal and SSRS reports to meet client requirements.</li>
+                        <li>Developed JavaScript validations for user account workflows based on business rules.</li>
+                        <li>Improved utility statement generation using baseline calculations; contributed to measurable financial impact.</li>
+                        <li>Recognized by clients for improving report performance and reducing turnaround time.</li>
+                      </ul>
+                    </details>
+                  </details>
+                </blockquote>
+              </article>
+            </div>
           </div>
         </div>
-      <a href="#projects" id="projects-btn" class="btn btn-default btn-lg btn-user top-50 bottom-40">Check out my projects</a>
-      </div>
-    </div>
-    <!-- /Portfolio -->
 
+        <a href="#volunteering" class="btn btn-default btn-lg btn-user top-50 bottom-40">See My Volunteering</a>
+      </div>
+    </section>
+    <!-- /Experience -->
+
+    <!-- Volunteering (NEW) -->
+    <section id="volunteering" class="intro header-fill bg-bind-education">
+      <div class="container vert-text">
+        <div class="container-center">
+          <h2 class="text-center space-bottom text-white section-title">
+            <i class="fa fa-heart" aria-hidden="true"></i> Volunteering
+          </h2>
+
+          <div class="row">
+            <div class="col-md-12 text-left projects-list">
+              <!-- Replace this placeholder with your real volunteering entries -->
+              <article>
+                <blockquote class="lead">
+                  <details open>
+                    <summary><strong class="item-title">Add Your Organization Here</strong></summary>
+                    <p><strong>Role</strong>: Volunteer / Team Lead / Mentor</p>
+                    <p><strong>Duration</strong>: Month YYYY – Present</p>
+
+                    <details open>
+                      <summary><strong>Impact</strong></summary>
+                      <ul class="clean-list">
+                        <li>Example: Built KPI framework to track program outcomes and operational metrics.</li>
+                        <li>Example: Designed reporting templates and streamlined data collection workflows.</li>
+                        <li>Example: Partnered with stakeholders to define goals and success measures.</li>
+                      </ul>
+                    </details>
+
+                    <details>
+                      <summary><strong>Tools</strong></summary>
+                      <p>Power BI, Excel, SQL, AWS, etc.</p>
+                    </details>
+                  </details>
+                </blockquote>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <a href="#projects" class="btn btn-default btn-lg btn-user top-50 bottom-40">Check out my projects</a>
+      </div>
+    </section>
+    <!-- /Volunteering -->
 
     <!-- Projects -->
-    <div id="projects" class="intro header-fill bg-bind-education">
+    <section id="projects" class="intro header-fill bg-bind-education">
       <div class="container vert-text">
         <div class="container-center">
-          <br>
-          <h2 class="text-center space-bottom text-white">
-          <i class="fa fa-coffee"></i><font size="8"> Programming Projects</font></h2>
+          <h2 class="text-center space-bottom text-white section-title">
+            <i class="fa fa-coffee" aria-hidden="true"></i> Programming Projects
+          </h2>
+
           <div class="row">
+            <div class="col-md-12 text-left projects-list">
+              <a href="https://github.com/alpana12/INFO6205_25" target="_blank" rel="noopener">
+                <blockquote class="lead">
+                  <details>
+                    <summary><strong>Genetic Sudoku</strong></summary>
+                    <p>Implemented a Genetic Algorithm to solve an N×N Sudoku puzzle, with unit tests using JUnit4.</p>
+                    <p><strong>Technologies</strong>: Java 8, JUnit4</p>
+                    <p><i class="fa fa-github-alt" aria-hidden="true"></i><span class="icon-space">GitHub Link</span></p>
+                  </details>
+                </blockquote>
+              </a>
 
-          <div class="col-md-12 text-left projects-list">
-		  
-		  	<a href="https://github.com/alpana12/INFO6205_25" target="_blank">
-              <blockquote class="lead">
-              <details>
-                <summary><strong>Genetic Sudoku</strong></summary>
-				<p> Implemented Genetic Algorithm to solve N*N Sudoku puzzle, along with the unit tests using Junit4 framework
-				</p>
-				<p>Technologies used : Java8, JUnit4 </p>
-                <p><i class="fa fa-github-alt"></i>
-                <span class="icon-space">Github Link</span></p>
-              </details>
-              </blockquote>
-            </a>
-            
-            <a href="https://github.com/alpana12/MoneyWizzard" target="_blank">
-              <blockquote class="lead">
-              <details>
-                <summary><strong>Money Wizard Website </strong></summary>
-              
-				<p>A complete solution to spiting bills, expense tracking and money transfer
-                </p>
-				<p>Designed a responsive website for users to add and manage his own expenses, transfer funds to his friends and split the bills with his friends
-				</p>
-				<p>Technologies used : Spring MVC, Hibernate, JavaScript, AngularJS, BootStrap </p>
-                <p><i class="fa fa-github-alt"></i>
-                <span class="icon-space">Github Link</span></p>
-              </details>
-              </blockquote>
-            </a>
-			
-			<a href="https://github.com/alpana12/FraudClaimDetection" target="_blank">
-              <blockquote class="lead">
-              <details>
-                <summary><strong>Fraud Claim Detection</strong></summary>
-                <p>My project is a simple application developed for "Application Engineering Development" course
-                </p>
-				<p>Developed an application using IoT to keep track of the patient’s health and their treatment history. This information is made accessible for the insurance company whenever there is a claim and based on the patient’s data, an algorithm is implemented to calculate the fraud factor and alert the insurance agent before the claim is approved
-				</p>
-				<p>Technologies used : Java Swing UI, Java8 </p>
-                <p><i class="fa fa-github-alt"></i>
-                <span class="icon-space">Github Link</span></p>
-              </details>
-              </blockquote>
-            </a>
-			
+              <a href="https://github.com/alpana12/MoneyWizzard" target="_blank" rel="noopener">
+                <blockquote class="lead">
+                  <details>
+                    <summary><strong>Money Wizard Website</strong></summary>
+                    <p>A complete solution for splitting bills, tracking expenses, and transferring money.</p>
+                    <p>Designed a responsive website for users to manage expenses, transfer funds, and split bills with friends.</p>
+                    <p><strong>Technologies</strong>: Spring MVC, Hibernate, JavaScript, AngularJS, Bootstrap</p>
+                    <p><i class="fa fa-github-alt" aria-hidden="true"></i><span class="icon-space">GitHub Link</span></p>
+                  </details>
+                </blockquote>
+              </a>
 
-        </div>
-
+              <a href="https://github.com/alpana12/FraudClaimDetection" target="_blank" rel="noopener">
+                <blockquote class="lead">
+                  <details>
+                    <summary><strong>Fraud Claim Detection</strong></summary>
+                    <p>Course project: a simple application for Application Engineering Development.</p>
+                    <p>
+                      Built an IoT-enabled application to track patient health and treatment history for claims processing.
+                      Implemented a fraud-factor algorithm to alert before claim approval.
+                    </p>
+                    <p><strong>Technologies</strong>: Java Swing UI, Java 8</p>
+                    <p><i class="fa fa-github-alt" aria-hidden="true"></i><span class="icon-space">GitHub Link</span></p>
+                  </details>
+                </blockquote>
+              </a>
+            </div>
           </div>
-          </div>
+
           <a href="#contact" class="btn btn-default btn-lg btn-user top-50 bottom-40">Got a Question?</a>
         </div>
       </div>
-    </div>
+    </section>
     <!-- /Projects -->
 
     <!-- Contact -->
-    <div id="contact" class="intro bg-bind-world">
+    <section id="contact" class="intro bg-bind-world">
       <div class="container vert-text">
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
             <div class="text-center">
-              <h2 class="tagline text-center space-bottom text-white">
-              <i class="fa fa-envelope"></i><font size="8"> Contact Me</font>
-            </h2>
+              <h2 class="tagline text-center space-bottom text-white section-title">
+                <i class="fa fa-envelope" aria-hidden="true"></i> Contact Me
+              </h2>
             </div>
+
             <div class="text-center text-white">
-            <p class="lead">
-              <h3>alpana.pothukuchi@gmail.com</h3>
-            </p>
-            <br>
-            <br>
-            <ul class="list-inline">
-              <!-- Facebook -->
-              <li class="lg-icon">
-                <a id="facebook-link" href="https://www.facebook.com/alpana12" target="_blank">
-                  <i class="fa fa-facebook fa-4x"></i></a>
-              </li>
-              <!-- Twitter -->
-              <li class="lg-icon">
-                <a id="twitter-link" href="https://twitter.com/scorpio_alpana" target="_blank">
-                  <i class="fa fa-twitter-square fa-4x"></i></a>
-              </li>
-              <!-- Google-plus-->
-              <li class="lg-icon">
-                <a id="Google-plus-link" href="https://plus.google.com/u/0/111479195946622688909" target="_blank">
-                  <i class="fa fa-google-plus-square fa-4x"></i></a>
-              </li>
-              <li class="lg-icon">
-                <a id="instagram-link" href="https://www.instagram.com/alpanapothukuchi/" target="_blank">
-                  <i class="fa fa-instagram fa-4x"></i></a>
-              </li>
-              <!-- Github -->
-              <li class="lg-icon">
-                <a id="github-link" href="https://github.com/alpana12" target="_blank">
-                  <i class="fa fa-github fa-4x"></i></a>
-              </li>
-              <!-- Linkedin -->
-              <li class="lg-icon">
-                <a id="linkedin-link" href="http://www.linkedin.com/in/alpana-pothukuchi12" target="_blank">
-                  <i class="fa fa-linkedin-square fa-4x"></i></a>
-              </li>
-              <!-- Resume -->
-              <li class="lg-icon">
-                <a id="resume-link" href="Alpana_Resume.pdf" target="_blank">
-                  <i class="fa fa-file-pdf-o fa-4x"></i></a>
-              </li>
-            </ul>
+              <p class="lead"><strong class="contact-email">alpana.pothukuchi@gmail.com</strong></p>
+
+              <ul class="list-inline top-30">
+                <li class="lg-icon">
+                  <a id="facebook-link" href="https://www.facebook.com/alpana12" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fa fa-facebook fa-4x" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="lg-icon">
+                  <a id="twitter-link" href="https://twitter.com/scorpio_alpana" target="_blank" rel="noopener" aria-label="Twitter">
+                    <i class="fa fa-twitter-square fa-4x" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="lg-icon">
+                  <a id="instagram-link" href="https://www.instagram.com/alpanapothukuchi/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fa fa-instagram fa-4x" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="lg-icon">
+                  <a id="github-link" href="https://github.com/alpana12" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fa fa-github fa-4x" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="lg-icon">
+                  <a id="linkedin-link" href="http://www.linkedin.com/in/alpana-pothukuchi12" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li class="lg-icon">
+                  <a id="resume-link" href="Alpana_Resume.pdf" target="_blank" rel="noopener" aria-label="Resume PDF">
+                    <i class="fa fa-file-pdf-o fa-4x" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Optional: add location / availability -->
+              <!-- <p class="small">Boston, MA • Open to opportunities</p> -->
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- End Contacts -->
+    </section>
+    <!-- /Contact -->
+
+    <!-- Optional: tiny CSS helpers (safe even with your existing theme) -->
+    <style>
+      /* Keeps your theme, just reduces visual clutter */
+      .section-title { font-size: clamp(2rem, 4vw, 3.2rem); }
+      .hero-title { color: #000; }
+      .hero-tagline { color: #000; }
+      .clean-list { margin: 0.75rem 0 0; padding-left: 1.2rem; }
+      .clean-list li { margin: 0.35rem 0; }
+      .contact-email { font-size: 1.4rem; }
+      .top-30 { margin-top: 30px; }
+    </style>
 
     <!-- JavaScript -->
     <script src="assets/js/vendor.js"></script>
     <script src="assets/js/script.js"></script>
-
   </body>
 </html>
