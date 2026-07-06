@@ -616,6 +616,287 @@
         transform: translateY(-3px);
       }
 
+      /* FDE Training Section */
+      #fde-training {
+        background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070') center/cover;
+        align-items: flex-start;
+      }
+
+      .fde-intro {
+        color: var(--text-dim);
+        font-size: 1.1rem;
+        line-height: 1.9;
+        max-width: 900px;
+        margin-bottom: var(--spacing-lg);
+      }
+
+      .fde-intro strong {
+        color: var(--gold-accent);
+        font-weight: 600;
+      }
+
+      .fde-subheading {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--text-light);
+        font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .fde-subheading i {
+        color: var(--gold-accent);
+        font-size: 0.85em;
+      }
+
+      /* Roadmap accordion */
+      .fde-accordion {
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        margin-bottom: 1rem;
+        transition: border-color 0.3s ease;
+      }
+
+      .fde-accordion:hover {
+        border-color: var(--gold-accent);
+      }
+
+      .fde-accordion-toggle {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        color: var(--text-light);
+      }
+
+      .fde-accordion-toggle:focus-visible {
+        outline: 2px solid var(--gold-accent);
+        outline-offset: 2px;
+      }
+
+      .fde-week-tag {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        color: var(--gold-accent);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        padding: 0.2rem 0.6rem;
+        white-space: nowrap;
+      }
+
+      .fde-accordion-toggle h4 {
+        font-family: 'Crimson Pro', Georgia, serif;
+        font-size: 1.3rem;
+        margin: 0;
+        flex: 1;
+      }
+
+      .fde-accordion-toggle .fa-chevron-down {
+        color: var(--text-dim);
+        transition: transform 0.3s ease;
+      }
+
+      .fde-accordion.open .fa-chevron-down {
+        transform: rotate(180deg);
+      }
+
+      .fde-accordion-body {
+        display: none;
+        padding: 0 1.5rem 1.5rem;
+      }
+
+      .fde-accordion.open .fde-accordion-body {
+        display: block;
+      }
+
+      .fde-accordion-body p.fde-week-brief {
+        color: var(--text-dim);
+        font-style: italic;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .fde-topic-list {
+        list-style: none;
+      }
+
+      .fde-topic-list li {
+        padding-left: 1.5rem;
+        position: relative;
+        margin-bottom: 0.6rem;
+        color: var(--text-dim);
+        line-height: 1.7;
+      }
+
+      .fde-topic-list li::before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--gold-accent);
+      }
+
+      .fde-topic-list li strong {
+        color: var(--text-light);
+        font-weight: 500;
+      }
+
+      /* Principles grid */
+      .fde-principles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-sm);
+      }
+
+      .fde-principle {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        padding: var(--spacing-sm) var(--spacing-md);
+      }
+
+      .fde-principle h5 {
+        font-family: 'Crimson Pro', Georgia, serif;
+        color: var(--gold-accent);
+        font-size: 1.15rem;
+        margin-bottom: 0.4rem;
+      }
+
+      .fde-principle p {
+        color: var(--text-dim);
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      /* Scenario cards */
+      .fde-scenario {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-left: 3px solid var(--gold-accent);
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .fde-scenario-industry {
+        font-size: 0.8rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold-accent);
+        margin-bottom: 0.5rem;
+      }
+
+      .fde-scenario h4 {
+        font-family: 'Crimson Pro', Georgia, serif;
+        color: var(--text-light);
+        font-size: 1.3rem;
+        margin-bottom: var(--spacing-xs);
+      }
+
+      .fde-scenario .fde-brief {
+        color: var(--text-dim);
+        line-height: 1.8;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .fde-scenario h6 {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.5rem;
+      }
+
+      .fde-questions {
+        list-style: none;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .fde-questions li {
+        padding-left: 1.5rem;
+        position: relative;
+        margin-bottom: 0.5rem;
+        color: var(--text-dim);
+        line-height: 1.7;
+      }
+
+      .fde-questions li::before {
+        content: '?';
+        position: absolute;
+        left: 0;
+        color: var(--gold-accent);
+        font-weight: 600;
+      }
+
+      .fde-reveal-btn {
+        background: transparent;
+        border: 1px solid var(--gold-accent);
+        color: var(--gold-accent);
+        padding: 0.5rem 1.25rem;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 0.85rem;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .fde-reveal-btn:hover,
+      .fde-reveal-btn:focus-visible {
+        background: var(--gold-accent);
+        color: var(--primary-dark);
+        outline: none;
+      }
+
+      .fde-approach {
+        display: none;
+        margin-top: var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+        background: rgba(212, 175, 55, 0.07);
+        border: 1px dashed rgba(212, 175, 55, 0.35);
+        color: var(--text-dim);
+        line-height: 1.8;
+        font-size: 0.95rem;
+      }
+
+      .fde-approach.visible {
+        display: block;
+      }
+
+      .fde-approach strong {
+        color: var(--gold-accent);
+      }
+
+      /* Resource links */
+      .fde-resources-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-sm);
+      }
+
+      .fde-resource-link {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        color: var(--text-light);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+      }
+
+      .fde-resource-link:hover {
+        border-color: var(--gold-accent);
+        transform: translateY(-3px);
+      }
+
+      .fde-resource-link i {
+        color: var(--gold-accent);
+      }
+
       /* Animations */
       @keyframes fadeInUp {
         from {
@@ -687,6 +968,7 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#volunteering">Volunteering</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#fde-training">FDE Training</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -1014,6 +1296,329 @@
       </div>
     </section>
 
+    <!-- FDE Training Section -->
+    <section id="fde-training">
+      <div class="container">
+        <h2 class="section-title">
+          <i class="fas fa-compass"></i>
+          FDE Training
+        </h2>
+
+        <div class="fde-intro">
+          <p>
+            A <strong>Forward Deployed Engineer (FDE)</strong> is a software engineer embedded with the customer — sitting in their environment, learning their workflows, integrating their messy data, and shipping software that changes how they operate in days, not quarters. This is my structured 30-day preparation guide for the role: a curriculum, the core principles, real company scenarios to practice against, and free training resources from Anthropic.
+          </p>
+        </div>
+
+        <!-- Roadmap -->
+        <h3 class="fde-subheading"><i class="fas fa-map"></i> 30-Day Preparation Roadmap</h3>
+
+        <div class="fde-accordion open">
+          <button class="fde-accordion-toggle" aria-expanded="true">
+            <span class="fde-week-tag">WEEK 1</span>
+            <h4>AI Foundations &amp; Fluency</h4>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="fde-accordion-body">
+            <p class="fde-week-brief">You cannot deploy what you don't understand. Build a correct mental model of LLMs and the engineering hygiene every FDE leans on daily.</p>
+            <ul class="fde-topic-list">
+              <li><strong>How LLMs work:</strong> tokens, context windows, temperature, hallucination — and what fine-tuning, RAG, and prompting each solve (and don't)</li>
+              <li><strong>Prompt engineering discipline:</strong> roles, structured tags, examples, chain-of-thought; iterate a messy real task through 5 prompt versions and measure improvement</li>
+              <li><strong>First API calls:</strong> get an API key, build a CLI summarizer with the Claude API, add streaming and retry logic</li>
+              <li><strong>Engineering hygiene:</strong> Git workflows (branch, rebase, resolve conflicts), Python drills, shell tooling (grep, jq, curl)</li>
+              <li><strong>SQL &amp; data literacy:</strong> joins, aggregations, window functions; profile a messy public CSV and write the "data quality memo" a customer would receive</li>
+              <li><strong>Capstone:</strong> build "Field Notes" — a tool that ingests any document set and answers questions with cited passages</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fde-accordion">
+          <button class="fde-accordion-toggle" aria-expanded="false">
+            <span class="fde-week-tag">WEEK 2</span>
+            <h4>Building AI Systems</h4>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="fde-accordion-body">
+            <p class="fde-week-brief">FDEs ship systems, not prompts. The production stack — and the most neglected, most important skill: evaluation.</p>
+            <ul class="fde-topic-list">
+              <li><strong>The Claude API in depth:</strong> tool use / function calling, prompt caching, structured JSON outputs with schema validation and automatic retries</li>
+              <li><strong>RAG from scratch:</strong> chunk → embed → store → retrieve → answer with citations; stress-test retrieval failures and fix chunking strategy</li>
+              <li><strong>Evaluation — the FDE superpower:</strong> build a golden test set from real cases, write an automated eval harness, and prove improvements with numbers instead of vibes</li>
+              <li><strong>MCP &amp; agents:</strong> build a simple Model Context Protocol server exposing a database tool; implement a plan → act → observe agent loop with step limits</li>
+              <li><strong>Capstone:</strong> "Analyst-in-a-Box" — RAG + tool use over a mock company's documents and database, with an eval suite proving ≥80% accuracy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fde-accordion">
+          <button class="fde-accordion-toggle" aria-expanded="false">
+            <span class="fde-week-tag">WEEK 3</span>
+            <h4>The Deployment Craft</h4>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="fde-accordion-body">
+            <p class="fde-week-brief">Forward deployed means it runs on their infrastructure, on their data, under their constraints.</p>
+            <ul class="fde-topic-list">
+              <li><strong>Data integration in the wild:</strong> connectors for REST APIs, file drops, and SQL databases; pagination, rate limits, incremental syncs, idempotent pipeline runs</li>
+              <li><strong>Ontology thinking:</strong> model a business as objects (Customer, Order, Asset), properties, and links — the heart of the Palantir approach; design one for a mock logistics company and defend every relation</li>
+              <li><strong>Operational dashboards:</strong> KPIs, drill-downs, and an AI layer (natural-language question → SQL → chart, with guardrails)</li>
+              <li><strong>Ship it:</strong> Dockerize, deploy to cloud behind auth, understand enterprise deployment via AWS Bedrock or Google Vertex AI</li>
+              <li><strong>Security &amp; constraints:</strong> PII handling, data residency, least privilege, audit logs; red-team your own app for prompt injection and patch what you find</li>
+              <li><strong>Capstone:</strong> "Mini-Foundry" — pipelines feed an ontology feeding a deployed, authenticated dashboard with an AI query layer</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fde-accordion">
+          <button class="fde-accordion-toggle" aria-expanded="false">
+            <span class="fde-week-tag">WEEK 4</span>
+            <h4>Field Skills &amp; Final Deployment</h4>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="fde-accordion-body">
+            <p class="fde-week-brief">The "forward" in FDE: sitting with customers, finding the real problem under the stated one, and shipping value in days.</p>
+            <ul class="fde-topic-list">
+              <li><strong>Customer discovery:</strong> workflows before features, "show me how you do it today", the five whys; write a problem brief with the cost of the problem quantified</li>
+              <li><strong>Scoping the wedge:</strong> the smallest deployable slice that produces measurable value in week one; turn vague asks into scoped one-week plans with explicit risks and cut-lines</li>
+              <li><strong>Demos that land:</strong> their data, their words, their workflow — never lorem ipsum; deliver the same demo three times and iterate</li>
+              <li><strong>Stakeholder skills:</strong> kickoff plans, weekly status updates, executive readouts, incident comms, and saying no to scope creep without losing trust</li>
+              <li><strong>Final mission:</strong> run discovery against a mock customer, scope it, build the end-to-end solution (pipeline → ontology → AI workflow → interface), and deliver a 15-minute customer presentation with live demo and metrics</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Principles -->
+        <h3 class="fde-subheading"><i class="fas fa-book"></i> The FDE Field Manual — 7 Rules</h3>
+        <div class="fde-principles-grid">
+          <div class="fde-principle">
+            <h5>1. The problem is never the stated problem</h5>
+            <p>Customers describe symptoms ("we need a dashboard", "we need AI"). Shadow the workflow until you find the decision that's slow, blind, or wrong — then attack that.</p>
+          </div>
+          <div class="fde-principle">
+            <h5>2. Data first, always</h5>
+            <p>80% of every deployment is data work: finding it, getting access, cleaning it, modeling it. If you can't name the source system and its owner, you're not ready to build.</p>
+          </div>
+          <div class="fde-principle">
+            <h5>3. Ship a wedge in week one</h5>
+            <p>Find the smallest slice a real named user touches and benefits from within days. Trust compounds from there. Grand architectures with no users die.</p>
+          </div>
+          <div class="fde-principle">
+            <h5>4. Evals over vibes</h5>
+            <p>Any AI feature must have a golden test set built from the customer's real cases — and a number. "It seems good" is not deployable.</p>
+          </div>
+          <div class="fde-principle">
+            <h5>5. You are the interface</h5>
+            <p>You translate between executives, operators, and engineers. Write clearly, demo with their data and vocabulary, and deliver bad news early.</p>
+          </div>
+          <div class="fde-principle">
+            <h5>6. Respect the environment</h5>
+            <p>Their infrastructure, their security rules, their compliance regime. PII handling, least privilege, audit trails, and prompt-injection defenses are table stakes.</p>
+          </div>
+          <div class="fde-principle">
+            <h5>7. Leave systems, not heroics</h5>
+            <p>A deployment that only works while you're on site is a failure. Document, automate, harden, and train their people. Success = it runs without you.</p>
+          </div>
+        </div>
+
+        <!-- Practice Scenarios -->
+        <h3 class="fde-subheading"><i class="fas fa-chess"></i> Company Scenarios — Practice Like It's Real</h3>
+        <p class="fde-intro" style="margin-bottom: var(--spacing-md);">
+          Work each scenario out loud or on paper before revealing the suggested approach. In interviews and in the field, the process matters more than the answer.
+        </p>
+
+        <div class="fde-scenario">
+          <div class="fde-scenario-industry">Airline Operations</div>
+          <h4>The Delayed Turnaround</h4>
+          <p class="fde-brief">
+            A major airline's ground-ops VP says: "Our aircraft turnarounds keep running late at our hub, and nobody can tell me why until three days after it happens. We want an AI solution." You have gate events in one system, crew schedules in another, baggage scans in a third, and weather feeds from a vendor.
+          </p>
+          <h6>Practice questions</h6>
+          <ul class="fde-questions">
+            <li>What would you ask the VP in the first 30 minutes, and whom else would you ask to meet?</li>
+            <li>Which single data source would you integrate first, and why?</li>
+            <li>What's your week-one wedge — the smallest thing a gate manager would actually use?</li>
+            <li>Where does AI genuinely help here, and where is it just a join across three systems?</li>
+          </ul>
+          <button class="fde-reveal-btn" aria-expanded="false">Show suggested approach</button>
+          <div class="fde-approach">
+            <strong>Discovery:</strong> Skip the VP's framing and shadow one turnaround end-to-end. Ask a gate manager to walk through the last late departure minute-by-minute. The real problem is usually visibility (nobody sees the delay forming) rather than prediction.
+            <br /><br />
+            <strong>Data:</strong> Gate events first — they're the spine every other dataset joins to (flight, gate, timestamp). Model an ontology around the Turnaround object with linked Crew, Bags, and Weather.
+            <br /><br />
+            <strong>Wedge:</strong> A live "turnaround board" showing every aircraft's progress against its critical path, flagging the ones trending late — no AI required yet. That earns trust and surfaces the data quality problems.
+            <br /><br />
+            <strong>AI layer (second):</strong> Natural-language root-cause queries over the joined history ("what drove D-gate delays last Tuesday?") and a delay-risk score — each validated against a golden set of historically labeled delays.
+          </div>
+        </div>
+
+        <div class="fde-scenario">
+          <div class="fde-scenario-industry">Healthcare</div>
+          <h4>The Prior-Authorization Backlog</h4>
+          <p class="fde-brief">
+            A hospital network's prior-authorization team has a 9-day backlog. Nurses spend hours copying data from the EHR into insurer portals. Leadership wants "an AI agent that does prior auth automatically." Patient data is involved, the compliance office is nervous, and the EHR vendor limits API access.
+          </p>
+          <h6>Practice questions</h6>
+          <ul class="fde-questions">
+            <li>Full automation vs. human-in-the-loop — which do you propose first, and how do you justify it?</li>
+            <li>What are the top three constraints that shape your architecture before you write any code?</li>
+            <li>How do you measure success in a way the compliance office and the nurses both accept?</li>
+            <li>What failure mode would be catastrophic here, and how do you design against it?</li>
+          </ul>
+          <button class="fde-reveal-btn" aria-expanded="false">Show suggested approach</button>
+          <div class="fde-approach">
+            <strong>Position:</strong> Human-in-the-loop first, always, in a clinical setting. The AI drafts the prior-auth packet (extracting diagnosis codes, clinical notes, payer requirements); a nurse reviews and submits. Automation of the review comes only after months of measured accuracy.
+            <br /><br />
+            <strong>Constraints before code:</strong> (1) PHI handling — where can data live, which models are approved, BAA requirements; (2) EHR access path — often flat-file exports before APIs; (3) auditability — every AI-drafted field must be traceable to its source passage.
+            <br /><br />
+            <strong>Metrics:</strong> Time-per-auth for nurses (their win), first-pass approval rate from insurers (leadership's win), and a documented error rate from weekly sampled audits (compliance's win).
+            <br /><br />
+            <strong>Catastrophic failure:</strong> A hallucinated clinical detail submitted to an insurer. Design: extraction-only prompts with citations, hard validation against the source record, and no free-generation of clinical facts.
+          </div>
+        </div>
+
+        <div class="fde-scenario">
+          <div class="fde-scenario-industry">Supply Chain / Manufacturing</div>
+          <h4>Three Systems, One Order</h4>
+          <p class="fde-brief">
+            A manufacturer's "where is my order?" question takes four phone calls to answer. The same order appears in the ERP, the warehouse system, and the shipping vendor's portal — often with conflicting statuses. The COO wants a single view and asks how long it will take.
+          </p>
+          <h6>Practice questions</h6>
+          <ul class="fde-questions">
+            <li>How do you resolve conflicting statuses across three systems — technically and politically?</li>
+            <li>What does the ontology look like? Name the objects, properties, and links.</li>
+            <li>The COO asks "how long?" in the first meeting. What do you actually say?</li>
+            <li>What breaks first when this goes to production, and what do you build to catch it?</li>
+          </ul>
+          <button class="fde-reveal-btn" aria-expanded="false">Show suggested approach</button>
+          <div class="fde-approach">
+            <strong>Conflicts:</strong> Don't average or guess — define a source-of-truth rule <em>with</em> the customer (e.g., shipping vendor wins after handoff, warehouse wins before it) and encode it in the pipeline. The political work of getting three system owners to agree is the actual job.
+            <br /><br />
+            <strong>Ontology:</strong> Order → OrderLines → Shipments → Milestones, linked to Customer, Plant, and Carrier. Each object carries its per-system record IDs so every displayed status is traceable to a source.
+            <br /><br />
+            <strong>The "how long" answer:</strong> "A read-only single view of your top 20% highest-value orders in two weeks; full coverage and write-back after we've validated the mapping with your ops team." Scoped, honest, and it ships a wedge.
+            <br /><br />
+            <strong>Production risk:</strong> Silent pipeline staleness — the view says "in transit" on data from three days ago. Build freshness monitoring and show a "last updated" stamp on every record from day one.
+          </div>
+        </div>
+
+        <div class="fde-scenario">
+          <div class="fde-scenario-industry">Financial Services</div>
+          <h4>The Fraud Team That Drowns in Alerts</h4>
+          <p class="fde-brief">
+            A bank's fraud team reviews 2,000 alerts a day; 96% are false positives. Analysts spend 15 minutes per alert gathering context from six internal systems. The head of fraud wants to "use LLMs to cut the noise" but the model-risk-management (MRM) team must approve anything touching decisions.
+          </p>
+          <h6>Practice questions</h6>
+          <ul class="fde-questions">
+            <li>Do you use the LLM to classify alerts or to accelerate analysts? Defend the choice to MRM.</li>
+            <li>What's the eval design — what's in your golden set and what number gets you approved?</li>
+            <li>How do you handle the six-system context-gathering problem?</li>
+            <li>An analyst says "the AI summary missed the key transaction." What's your process?</li>
+          </ul>
+          <button class="fde-reveal-btn" aria-expanded="false">Show suggested approach</button>
+          <div class="fde-approach">
+            <strong>Accelerate, don't decide:</strong> An LLM-generated case file — pulling the six systems' context into one summarized, cited brief per alert — cuts the 15 minutes without touching the decision, which keeps you out of the highest MRM risk tier. Alert classification stays with the existing (auditable) rules/ML stack.
+            <br /><br />
+            <strong>Evals:</strong> Golden set of 200 historical alerts with analyst-written "ideal briefs." Measure factual coverage (did it surface the key transactions?), citation accuracy, and hallucination rate — target near-zero fabricated facts, and report the number in MRM's template, not yours.
+            <br /><br />
+            <strong>Six systems:</strong> This is a data-integration problem wearing an AI costume. Build read-only connectors and an Alert-centric ontology first; the LLM only summarizes what retrieval hands it.
+            <br /><br />
+            <strong>Missed transaction:</strong> Treat it as an incident: reproduce, determine whether it was retrieval (didn't fetch) or summarization (fetched, dropped), add the case to the golden set, fix, re-run evals, and report back to that analyst personally. That loop is what builds trust.
+          </div>
+        </div>
+
+        <div class="fde-scenario">
+          <div class="fde-scenario-industry">Government / Public Sector</div>
+          <h4>The Disaster-Response Data Room</h4>
+          <p class="fde-brief">
+            A state emergency-management agency is preparing for hurricane season. During events, they juggle shelter capacity spreadsheets, 911 call volumes, power-outage maps, and road closures — all in different formats, some updated by fax. They have strict data-residency rules and spotty connectivity during storms.
+          </p>
+          <h6>Practice questions</h6>
+          <ul class="fde-questions">
+            <li>What do you build before the season vs. what must work during a storm?</li>
+            <li>How do the residency and connectivity constraints change your architecture?</li>
+            <li>Fax-updated spreadsheets: modernize the process or meet it where it is?</li>
+            <li>Whose workflow do you shadow first, and what one question do you ask them?</li>
+          </ul>
+          <button class="fde-reveal-btn" aria-expanded="false">Show suggested approach</button>
+          <div class="fde-approach">
+            <strong>Before vs. during:</strong> Before: integration pipelines, the ontology (Shelter, Incident, OutageArea, RoadSegment), and drills with last season's data. During: a read-fast, degrade-gracefully common operating picture — nothing that requires new behavior mid-crisis.
+            <br /><br />
+            <strong>Constraints:</strong> Residency likely means on-prem or gov-cloud deployment (this is where Bedrock/Vertex-style enterprise hosting knowledge matters). Spotty connectivity means local caching and an interface that stays useful with stale-but-timestamped data.
+            <br /><br />
+            <strong>The fax:</strong> Meet it where it is — an intake step (even manual transcription with validation) beats a modernization project that lands mid-hurricane. Modernize in the off-season.
+            <br /><br />
+            <strong>Shadow first:</strong> The operations-center shift lead. Ask: "During the last event, what did you need to know that took more than five minutes to find out?" Build that.
+          </div>
+        </div>
+
+        <div class="fde-scenario">
+          <div class="fde-scenario-industry">Interview Drill</div>
+          <h4>Rapid-Fire FDE Questions</h4>
+          <p class="fde-brief">
+            The questions that separate demo artists from deployers. Practice answering each in under two minutes, out loud.
+          </p>
+          <ul class="fde-questions">
+            <li>A customer says "we need a chatbot." What's your first move?</li>
+            <li>Your live demo crashes in front of the customer's executives. Walk me through the next five minutes.</li>
+            <li>How do you know an AI feature is good enough to ship? What's your evidence standard?</li>
+            <li>The customer's data is far messier than promised and the timeline hasn't moved. What do you do?</li>
+            <li>An executive asks for a feature you believe is the wrong priority. How do you handle it?</li>
+            <li>Explain RAG to a non-technical operations manager in three sentences.</li>
+            <li>What's prompt injection, and why does it matter more once the model has tool access?</li>
+            <li>What does a successful first week on a customer site look like — concretely?</li>
+          </ul>
+          <button class="fde-reveal-btn" aria-expanded="false">Show what strong answers have in common</button>
+          <div class="fde-approach">
+            Strong answers share a shape: <strong>they start with the customer's workflow, not the technology.</strong> They scope before they build ("here's the wedge, here's what I'm explicitly not doing yet"). They cite evidence standards (golden sets, error rates, named users completing real tasks faster). They own failure calmly and specifically — narrate the triage, fall back to the backup path, follow up same-day. And they treat pushback as information: disagree with data, commit fully once a decision is made, and never let scope creep in silently.
+          </div>
+        </div>
+
+        <!-- Resources -->
+        <h3 class="fde-subheading"><i class="fas fa-link"></i> Free Training Resources (Anthropic)</h3>
+        <p class="fde-intro" style="margin-bottom: var(--spacing-md);">
+          Anthropic Academy courses are free, self-paced, and issue certificates you can add to LinkedIn.
+        </p>
+        <div class="fde-resources-grid">
+          <a href="https://anthropic.skilljar.com" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fas fa-graduation-cap"></i> Anthropic Academy — full course catalog
+          </a>
+          <a href="https://anthropic.skilljar.com/claude-101" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fas fa-play"></i> Claude 101 — start here
+          </a>
+          <a href="https://anthropic.skilljar.com/ai-fluency-framework-foundations" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fas fa-brain"></i> AI Fluency: Framework &amp; Foundations
+          </a>
+          <a href="https://anthropic.skilljar.com/claude-with-the-anthropic-api" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fas fa-code"></i> Building with the Claude API (flagship, ~8h)
+          </a>
+          <a href="https://anthropic.skilljar.com/claude-code-in-action" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fas fa-terminal"></i> Claude Code in Action
+          </a>
+          <a href="https://anthropic.skilljar.com/introduction-to-model-context-protocol" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fas fa-plug"></i> Introduction to Model Context Protocol
+          </a>
+          <a href="https://anthropic.skilljar.com/model-context-protocol-advanced-topics" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fas fa-layer-group"></i> MCP: Advanced Topics
+          </a>
+          <a href="https://anthropic.skilljar.com/claude-in-amazon-bedrock" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fab fa-aws"></i> Claude with Amazon Bedrock
+          </a>
+          <a href="https://anthropic.skilljar.com/claude-in-google-cloud-vertex-ai" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fab fa-google"></i> Claude with Google Cloud Vertex AI
+          </a>
+          <a href="https://www.anthropic.com/learn" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fas fa-book-open"></i> Anthropic Learn hub
+          </a>
+          <a href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fas fa-pen-fancy"></i> Prompt engineering guide (docs)
+          </a>
+          <a href="https://github.com/anthropics/anthropic-cookbook" target="_blank" rel="noopener" class="fde-resource-link">
+            <i class="fab fa-github"></i> Anthropic Cookbook — code recipes
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact">
       <div class="container">
@@ -1104,4 +1709,35 @@
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classLis
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.education-card, .experience-item, .volunteer-card, .project-card, .fde-accordion, .fde-scenario, .fde-principle').forEach(el => {
+        observer.observe(el);
+      });
+
+      // FDE Training: accordion toggles
+      document.querySelectorAll('.fde-accordion-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const panel = btn.closest('.fde-accordion');
+          const isOpen = panel.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      });
+
+      // FDE Training: reveal suggested approaches
+      document.querySelectorAll('.fde-reveal-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const approach = btn.nextElementSibling;
+          const visible = approach.classList.toggle('visible');
+          btn.setAttribute('aria-expanded', visible ? 'true' : 'false');
+          btn.textContent = visible ? 'Hide approach' : btn.dataset.label || 'Show suggested approach';
+          if (!btn.dataset.label) btn.dataset.label = 'Show suggested approach';
+        });
+      });
+    </script>
+  </body>
+</html>
