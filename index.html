@@ -745,6 +745,48 @@
         font-weight: 500;
       }
 
+      /* Plain-English explainer + diagrams + per-week links */
+      .fde-plain {
+        background: rgba(212, 175, 55, 0.06);
+        border-left: 3px solid var(--gold-accent);
+        padding: 1rem 1.25rem;
+        margin-bottom: var(--spacing-sm);
+        color: var(--text-dim);
+        line-height: 1.8;
+        font-size: 0.98rem;
+      }
+
+      .fde-plain strong {
+        color: var(--text-light);
+        font-weight: 500;
+      }
+
+      .fde-diagram {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: var(--spacing-sm) 0 var(--spacing-md);
+      }
+
+      .fde-week-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: var(--spacing-sm);
+      }
+
+      .fde-week-links .fde-resource-link {
+        flex: 1 1 260px;
+      }
+
+      .fde-links-label {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-top: var(--spacing-md);
+      }
+
       /* Principles grid */
       .fde-principles-grid {
         display: grid;
@@ -1321,6 +1363,37 @@
           </button>
           <div class="fde-accordion-body">
             <p class="fde-week-brief">You cannot deploy what you don't understand. Build a correct mental model of LLMs and the engineering hygiene every FDE leans on daily.</p>
+
+            <div class="fde-plain">
+              <strong>In plain English:</strong> An AI language model is like <strong>supercharged autocomplete</strong>. It has read enormous amounts of text and learned to predict what words most likely come next. That's why it can write fluently — and also why it can sound completely confident while being completely wrong (a "hallucination"). This week is about learning what these tools genuinely can and can't do, plus the basic craftsman skills (organizing code, working with data tables) that every technical job relies on.
+            </div>
+
+            <svg class="fde-diagram" viewBox="0 0 860 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: how an AI model answers a question, in four steps, with a warning about hallucination">
+              <defs>
+                <marker id="arrw1" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+                  <path d="M0,0 L10,4 L0,8 Z" fill="#d4af37" />
+                </marker>
+              </defs>
+              <rect x="10" y="40" width="180" height="76" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="100" y="72" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">1. You ask a question</text>
+              <text x="100" y="96" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">in plain language</text>
+              <line x1="196" y1="78" x2="222" y2="78" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw1)" />
+              <rect x="230" y="40" width="180" height="76" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="320" y="72" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">2. Text becomes "tokens"</text>
+              <text x="320" y="96" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">small word-pieces</text>
+              <line x1="416" y1="78" x2="442" y2="78" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw1)" />
+              <rect x="450" y="40" width="210" height="76" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="555" y="72" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">3. Model predicts next words</text>
+              <text x="555" y="96" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">like supercharged autocomplete</text>
+              <line x1="666" y1="78" x2="692" y2="78" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw1)" />
+              <rect x="700" y="40" width="150" height="76" rx="4" fill="rgba(212,175,55,0.12)" stroke="#d4af37" />
+              <text x="775" y="72" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">4. You get an answer</text>
+              <text x="775" y="96" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">fluent — not always true</text>
+              <rect x="10" y="150" width="840" height="76" rx="4" fill="rgba(212,175,55,0.05)" stroke="#d4af37" stroke-opacity="0.35" stroke-dasharray="5 4" />
+              <text x="430" y="182" text-anchor="middle" fill="#d4af37" font-family="Work Sans, sans-serif" font-size="14" font-weight="600">Key insight: the model predicts plausible text — it does not "look things up"</text>
+              <text x="430" y="206" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="13">So it can sound confident and still be wrong ("hallucination"). Everything you build must account for this.</text>
+            </svg>
+
             <ul class="fde-topic-list">
               <li><strong>How LLMs work:</strong> tokens, context windows, temperature, hallucination — and what fine-tuning, RAG, and prompting each solve (and don't)</li>
               <li><strong>Prompt engineering discipline:</strong> roles, structured tags, examples, chain-of-thought; iterate a messy real task through 5 prompt versions and measure improvement</li>
@@ -1329,6 +1402,15 @@
               <li><strong>SQL &amp; data literacy:</strong> joins, aggregations, window functions; profile a messy public CSV and write the "data quality memo" a customer would receive</li>
               <li><strong>Capstone:</strong> build "Field Notes" — a tool that ingests any document set and answers questions with cited passages</li>
             </ul>
+            <p class="fde-links-label">Start here — direct links</p>
+            <div class="fde-week-links">
+              <a href="https://anthropic.skilljar.com/ai-fluency-framework-foundations" target="_blank" rel="noopener" class="fde-resource-link">
+                <i class="fas fa-brain"></i> AI Fluency: Framework &amp; Foundations — no coding needed; how to think about AI
+              </a>
+              <a href="https://anthropic.skilljar.com/claude-101" target="_blank" rel="noopener" class="fde-resource-link">
+                <i class="fas fa-play"></i> Claude 101 — hands-on basics of working with an AI assistant
+              </a>
+            </div>
           </div>
         </div>
 
@@ -1340,6 +1422,43 @@
           </button>
           <div class="fde-accordion-body">
             <p class="fde-week-brief">FDEs ship systems, not prompts. The production stack — and the most neglected, most important skill: evaluation.</p>
+
+            <div class="fde-plain">
+              <strong>In plain English:</strong> Out of the box, an AI model knows nothing about <em>your company's</em> documents. The fix is called <strong>RAG</strong> (Retrieval-Augmented Generation) — think of it as hiring a <strong>librarian</strong>: your documents are filed into a searchable library, the librarian pulls only the relevant pages for each question, and the AI writes its answer from those pages, citing them. Then comes the part most people skip: <strong>evaluation</strong> — a scorecard of test questions with known answers, so you can prove with a number (not a feeling) that the system works.
+            </div>
+
+            <svg class="fde-diagram" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: RAG — documents are indexed into a library, questions retrieve relevant pages, the AI answers with citations, and an eval scorecard measures quality">
+              <defs>
+                <marker id="arrw2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+                  <path d="M0,0 L10,4 L0,8 Z" fill="#d4af37" />
+                </marker>
+              </defs>
+              <rect x="10" y="20" width="170" height="70" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="95" y="50" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">Your documents</text>
+              <text x="95" y="72" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">manuals, reports, policies</text>
+              <line x1="186" y1="55" x2="222" y2="55" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw2)" />
+              <rect x="230" y="20" width="190" height="70" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="325" y="50" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">Searchable library</text>
+              <text x="325" y="72" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">split into chunks &amp; indexed</text>
+              <line x1="325" y1="96" x2="325" y2="146" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw2)" />
+              <rect x="10" y="155" width="170" height="70" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="95" y="185" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">Your question</text>
+              <text x="95" y="207" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">"What's our refund policy?"</text>
+              <line x1="186" y1="190" x2="222" y2="190" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw2)" />
+              <rect x="230" y="155" width="190" height="70" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="325" y="185" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">Librarian finds pages</text>
+              <text x="325" y="207" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">"retrieval" — only what's relevant</text>
+              <line x1="426" y1="190" x2="462" y2="190" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw2)" />
+              <rect x="470" y="155" width="190" height="70" rx="4" fill="rgba(212,175,55,0.12)" stroke="#d4af37" />
+              <text x="565" y="185" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">AI writes the answer</text>
+              <text x="565" y="207" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">from those pages, with citations</text>
+              <line x1="666" y1="190" x2="702" y2="190" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw2)" />
+              <rect x="710" y="155" width="140" height="70" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" stroke-dasharray="5 4" />
+              <text x="780" y="185" text-anchor="middle" fill="#d4af37" font-family="Work Sans, sans-serif" font-size="15" font-weight="600">Scorecard</text>
+              <text x="780" y="207" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">"evals": test vs. known answers</text>
+              <text x="430" y="270" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="13">Key insight: the AI only answers as well as the librarian retrieves — most "AI bugs" are retrieval bugs.</text>
+            </svg>
+
             <ul class="fde-topic-list">
               <li><strong>The Claude API in depth:</strong> tool use / function calling, prompt caching, structured JSON outputs with schema validation and automatic retries</li>
               <li><strong>RAG from scratch:</strong> chunk → embed → store → retrieve → answer with citations; stress-test retrieval failures and fix chunking strategy</li>
@@ -1347,6 +1466,15 @@
               <li><strong>MCP &amp; agents:</strong> build a simple Model Context Protocol server exposing a database tool; implement a plan → act → observe agent loop with step limits</li>
               <li><strong>Capstone:</strong> "Analyst-in-a-Box" — RAG + tool use over a mock company's documents and database, with an eval suite proving ≥80% accuracy</li>
             </ul>
+            <p class="fde-links-label">Start here — direct links</p>
+            <div class="fde-week-links">
+              <a href="https://anthropic.skilljar.com/claude-with-the-anthropic-api" target="_blank" rel="noopener" class="fde-resource-link">
+                <i class="fas fa-code"></i> Building with the Claude API — the flagship course; covers tool use, RAG &amp; evals
+              </a>
+              <a href="https://github.com/anthropics/anthropic-cookbook" target="_blank" rel="noopener" class="fde-resource-link">
+                <i class="fab fa-github"></i> Anthropic Cookbook — copy-paste working examples (RAG, citations, evals)
+              </a>
+            </div>
           </div>
         </div>
 
@@ -1358,6 +1486,43 @@
           </button>
           <div class="fde-accordion-body">
             <p class="fde-week-brief">Forward deployed means it runs on their infrastructure, on their data, under their constraints.</p>
+
+            <div class="fde-plain">
+              <strong>In plain English:</strong> Every company's information lives scattered across spreadsheets, databases, and apps that don't talk to each other. This week you learn to build the <strong>plumbing</strong> (pipelines) that gathers and cleans it, then organize it into an <strong>ontology</strong> — a fancy word for a map of the business in real-world terms: Customers place Orders, Orders become Shipments. Once data is organized the way people actually think, you can put a <strong>dashboard</strong> on top that anyone can use — and deploy it safely inside the company's own walls, with locks (security) and logbooks (audit trails).
+            </div>
+
+            <svg class="fde-diagram" viewBox="0 0 860 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: three messy data sources flow through a pipeline into an ontology of business objects, powering a secure dashboard">
+              <defs>
+                <marker id="arrw3" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+                  <path d="M0,0 L10,4 L0,8 Z" fill="#d4af37" />
+                </marker>
+              </defs>
+              <rect x="10" y="15" width="150" height="56" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="85" y="40" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="14" font-weight="500">Spreadsheets</text>
+              <text x="85" y="59" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="11">inconsistent, manual</text>
+              <rect x="10" y="90" width="150" height="56" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="85" y="115" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="14" font-weight="500">Databases</text>
+              <text x="85" y="134" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="11">different formats</text>
+              <rect x="10" y="165" width="150" height="56" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="85" y="190" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="14" font-weight="500">Other apps</text>
+              <text x="85" y="209" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="11">vendor portals, APIs</text>
+              <line x1="166" y1="43" x2="225" y2="105" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw3)" />
+              <line x1="166" y1="118" x2="225" y2="118" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw3)" />
+              <line x1="166" y1="193" x2="225" y2="131" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw3)" />
+              <rect x="233" y="88" width="165" height="62" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="315" y="113" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="14" font-weight="500">Pipeline (plumbing)</text>
+              <text x="315" y="133" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="11">clean, combine, keep fresh</text>
+              <line x1="404" y1="119" x2="440" y2="119" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw3)" />
+              <rect x="448" y="88" width="190" height="62" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="543" y="113" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="14" font-weight="500">Ontology (business map)</text>
+              <text x="543" y="133" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="11">Customer → Order → Shipment</text>
+              <line x1="644" y1="119" x2="680" y2="119" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw3)" />
+              <rect x="688" y="88" width="162" height="62" rx="4" fill="rgba(212,175,55,0.12)" stroke="#d4af37" />
+              <text x="769" y="113" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="14" font-weight="500">Dashboard</text>
+              <text x="769" y="133" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="11">what people use every day</text>
+              <text x="500" y="245" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="13">🔒 Deployed on the customer's own systems — with locks (security), keys (access control), and logbooks (audit trails).</text>
+            </svg>
+
             <ul class="fde-topic-list">
               <li><strong>Data integration in the wild:</strong> connectors for REST APIs, file drops, and SQL databases; pagination, rate limits, incremental syncs, idempotent pipeline runs</li>
               <li><strong>Ontology thinking:</strong> model a business as objects (Customer, Order, Asset), properties, and links — the heart of the Palantir approach; design one for a mock logistics company and defend every relation</li>
@@ -1366,6 +1531,15 @@
               <li><strong>Security &amp; constraints:</strong> PII handling, data residency, least privilege, audit logs; red-team your own app for prompt injection and patch what you find</li>
               <li><strong>Capstone:</strong> "Mini-Foundry" — pipelines feed an ontology feeding a deployed, authenticated dashboard with an AI query layer</li>
             </ul>
+            <p class="fde-links-label">Start here — direct links</p>
+            <div class="fde-week-links">
+              <a href="https://anthropic.skilljar.com/introduction-to-model-context-protocol" target="_blank" rel="noopener" class="fde-resource-link">
+                <i class="fas fa-plug"></i> Intro to MCP — the standard way to connect AI to company systems &amp; data
+              </a>
+              <a href="https://anthropic.skilljar.com/claude-in-amazon-bedrock" target="_blank" rel="noopener" class="fde-resource-link">
+                <i class="fab fa-aws"></i> Claude with Amazon Bedrock — how AI is deployed inside enterprise clouds
+              </a>
+            </div>
           </div>
         </div>
 
@@ -1377,6 +1551,41 @@
           </button>
           <div class="fde-accordion-body">
             <p class="fde-week-brief">The "forward" in FDE: sitting with customers, finding the real problem under the stated one, and shipping value in days.</p>
+
+            <div class="fde-plain">
+              <strong>In plain English:</strong> This week has almost nothing to do with computers. It's the skill of a good <strong>doctor</strong>: patients describe symptoms ("we need a chatbot"); the diagnosis comes from examining the workflow itself. You learn to listen and observe, promise something <strong>small but real</strong> for week one (the "wedge"), demonstrate it using the customer's own data and vocabulary, and measure success by one thing only: a real person doing a real task measurably faster. Then the loop repeats, bigger each time.
+            </div>
+
+            <svg class="fde-diagram" viewBox="0 0 860 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram: the field loop — listen, scope small, build, demo, measure, then expand and repeat">
+              <defs>
+                <marker id="arrw4" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+                  <path d="M0,0 L10,4 L0,8 Z" fill="#d4af37" />
+                </marker>
+              </defs>
+              <rect x="10" y="50" width="150" height="70" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="85" y="80" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">1. Listen</text>
+              <text x="85" y="102" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">shadow the real workflow</text>
+              <line x1="166" y1="85" x2="192" y2="85" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw4)" />
+              <rect x="200" y="50" width="150" height="70" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="275" y="80" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">2. Scope small</text>
+              <text x="275" y="102" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">a one-week "wedge"</text>
+              <line x1="356" y1="85" x2="382" y2="85" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw4)" />
+              <rect x="390" y="50" width="140" height="70" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="460" y="80" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">3. Build</text>
+              <text x="460" y="102" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">days, not months</text>
+              <line x1="536" y1="85" x2="562" y2="85" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw4)" />
+              <rect x="570" y="50" width="140" height="70" rx="4" fill="rgba(255,255,255,0.05)" stroke="#d4af37" stroke-opacity="0.5" />
+              <text x="640" y="80" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">4. Demo</text>
+              <text x="640" y="102" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">their data, their words</text>
+              <line x1="716" y1="85" x2="742" y2="85" stroke="#d4af37" stroke-width="1.5" marker-end="url(#arrw4)" />
+              <rect x="750" y="50" width="100" height="70" rx="4" fill="rgba(212,175,55,0.12)" stroke="#d4af37" />
+              <text x="800" y="80" text-anchor="middle" fill="#e8e8e8" font-family="Work Sans, sans-serif" font-size="15" font-weight="500">5. Measure</text>
+              <text x="800" y="102" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="12">real users, real numbers</text>
+              <path d="M 800 126 L 800 180 L 85 180 L 85 132" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#arrw4)" />
+              <text x="440" y="172" text-anchor="middle" fill="#d4af37" font-family="Work Sans, sans-serif" font-size="14" font-weight="600">6. Expand &amp; repeat — trust compounds with every loop</text>
+              <text x="440" y="222" text-anchor="middle" fill="#b0b0b0" font-family="Work Sans, sans-serif" font-size="13">Key insight: success = a named person completing a real task, measurably faster. Not lines of code, not good vibes in a meeting.</text>
+            </svg>
+
             <ul class="fde-topic-list">
               <li><strong>Customer discovery:</strong> workflows before features, "show me how you do it today", the five whys; write a problem brief with the cost of the problem quantified</li>
               <li><strong>Scoping the wedge:</strong> the smallest deployable slice that produces measurable value in week one; turn vague asks into scoped one-week plans with explicit risks and cut-lines</li>
@@ -1384,6 +1593,15 @@
               <li><strong>Stakeholder skills:</strong> kickoff plans, weekly status updates, executive readouts, incident comms, and saying no to scope creep without losing trust</li>
               <li><strong>Final mission:</strong> run discovery against a mock customer, scope it, build the end-to-end solution (pipeline → ontology → AI workflow → interface), and deliver a 15-minute customer presentation with live demo and metrics</li>
             </ul>
+            <p class="fde-links-label">Start here — direct links</p>
+            <div class="fde-week-links">
+              <a href="https://www.anthropic.com/learn" target="_blank" rel="noopener" class="fde-resource-link">
+                <i class="fas fa-book-open"></i> Anthropic Learn hub — guides on rolling AI out across real organizations
+              </a>
+              <a href="https://anthropic.skilljar.com/claude-code-in-action" target="_blank" rel="noopener" class="fde-resource-link">
+                <i class="fas fa-terminal"></i> Claude Code in Action — build demos fast with an AI pair-engineer
+              </a>
+            </div>
           </div>
         </div>
 
